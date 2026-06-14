@@ -5,12 +5,12 @@ initDb();
 
 console.log("Limpando dados...");
 db.exec(`
+  DELETE FROM bets;
+  DELETE FROM transactions;
   DELETE FROM selections;
   DELETE FROM markets;
   DELETE FROM events;
   DELETE FROM sports;
-  DELETE FROM bets;
-  DELETE FROM transactions;
   DELETE FROM users WHERE role = 'admin';
 `);
 
